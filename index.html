@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#24103f">
+  <meta name="description" content="Mobile Reisebegleitung für die Rennradtour von München über die Dolomiten nach Venedig.">
+  <title>Ride to Venice · 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#start" aria-label="Zur Startseite">
+      <span class="brand-mark">MV</span>
+      <span>RIDE TO VENICE</span>
+    </a>
+    <button class="menu-button" aria-label="Menü öffnen" aria-expanded="false">Menü</button>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#route">Route</a><a href="#etappen">Etappen</a><a href="#zuege">Züge</a>
+      <a href="#unterkuenfte">Unterkünfte</a><a href="#packliste">Packliste</a><a href="#aufgaben">Aufgaben</a><a class="nav-cta" href="https://tricount.com/toBupMOqjvGoIPvlit" target="_blank" rel="noopener">Tricount ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="start">
+      <div class="hero-shape hero-shape-one"></div><div class="hero-shape hero-shape-two"></div>
+      <div class="hero-content">
+        <p class="eyebrow">30.09.–07.10.2026 · 8 Etappen</p>
+        <h1>München →<br><span>Venedig</span></h1>
+        <p class="hero-copy">Mit der Regio nach Bad Tölz. Mit dem Rennrad über den Brenner und durch die Dolomiten bis Mestre. Mit dem Zug zurück nach München.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#heute">Heutige Etappe</a>
+          <a class="button secondary" href="https://www.komoot.com/de-de/collection/4714872/-mu-badtoelz-dolos-mestre-venedig?share_token=aT7o9THLhqHhdYPdLx1cVd1tM1IJHghPVbrp3KPV6sJkvXHXan&ref=collection&t_s=referral&t_cid=collection_share&t_ref_username=3475364858020" target="_blank" rel="noopener">Komoot öffnen ↗</a>
+        </div>
+        <div class="countdown" aria-live="polite"><span id="countdownNumber">–</span><small id="countdownLabel">Tage bis zum Start</small></div>
+      </div>
+      <div class="mountain-card" aria-label="Dolomiten Highlight">
+        <svg viewBox="0 0 700 360" role="img" aria-label="Abstrakte Berglandschaft">
+          <defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#321455"/><stop offset="1" stop-color="#61389a"/></linearGradient></defs>
+          <rect width="700" height="360" rx="30" fill="url(#sky)"/>
+          <circle cx="555" cy="78" r="39" fill="#fceb14"/>
+          <path d="M0 300 165 96l72 91 74-126 82 126 63-88 83 101 72-143 89 243Z" fill="#dac1f5" opacity=".9"/>
+          <path d="m82 300 190-163 79 76 91-114 72 106 64-58 122 153Z" fill="#1b0b2d" opacity=".88"/>
+          <path d="M0 303c142-31 238-17 353 4 103 19 205 22 347-7v60H0Z" fill="#fceb14"/>
+        </svg>
+        <div><span>Highlight</span><strong>Die Dolomiten</strong><small>Tag 4–6 · bis 1.527 m</small></div>
+      </div>
+    </section>
+
+    <section class="stats band">
+      <div><strong>617</strong><span>Kilometer</span></div>
+      <div><strong>5.836</strong><span>Höhenmeter hoch</span></div>
+      <div><strong>6.516</strong><span>Höhenmeter runter</span></div>
+      <div><strong>8</strong><span>Etappen</span></div>
+    </section>
+
+    <section class="section today" id="heute">
+      <div class="section-heading"><p class="eyebrow">Reisemodus</p><h2>Heute wichtig</h2></div>
+      <div id="todayCard" class="today-card"></div>
+    </section>
+
+    <section class="section route-section" id="route">
+      <div class="section-heading"><p class="eyebrow">Vom Isarufer zum Adriatischen Meer</p><h2>Routenüberblick</h2><p>Alle Werte stammen ausschließlich aus eurer verlinkten Komoot Collection. Ein Klick auf einen Tourtag öffnet die zugehörige Etappe.</p></div>
+      <div class="route-line" id="routeLine"></div>
+    </section>
+
+    <section class="section stages-section" id="etappen">
+      <div class="section-heading"><p class="eyebrow">8 Tage im Sattel</p><h2>Etappen & Wetter</h2><p>Das Wetter wird für Start, höchsten Punkt und Ziel geladen. Vor dem Start bitte Warnungen und lokale Prognosen prüfen.</p></div>
+      <div class="stage-grid" id="stageGrid"></div>
+    </section>
+
+    <section class="section trains" id="zuege">
+      <div class="section-heading"><p class="eyebrow">Anreise & Rückreise</p><h2>Züge</h2><p>Die DB Live Links öffnen die aktuelle Verbindung mit Verspätungen und Gleisangaben. Die Wagenreihung beziehungsweise der Fahrradwagen wird angezeigt, sofern das Bahnunternehmen diese Information bereitstellt.</p></div>
+      <div class="train-layout">
+        <article class="panel outbound">
+          <div class="panel-top"><span class="tag open">Noch auswählen</span><span>Mi · 30.09.2026</span></div>
+          <h3>München Hbf → Bad Tölz</h3>
+          <p>Direkte Regionalverbindungen mit der RB 56. Die gewünschte Verbindung kann hier markiert werden.</p>
+          <div class="train-options" id="outboundOptions">
+            <div class="train-option"><label><input type="radio" name="outbound" value="0802"><span><b>08:02 → 08:57</b><small>RB 56 · direkt · Innsbruck etwa 15:15</small></span></label><a href="https://www.bahn.de/buchung/fahrplan/suche#sts=true&so=M%C3%BCnchen%20Hbf&zo=Bad%20T%C3%B6lz&hd=2026-09-30T08:02:00&hza=D&ar=false&s=true&d=false&hz=%5B%5D" target="_blank" rel="noopener">DB live ↗</a></div>
+            <div class="train-option"><label><input type="radio" name="outbound" value="0902"><span><b>09:02 → 09:57</b><small>RB 56 · direkt · Innsbruck etwa 16:15</small></span></label><a href="https://www.bahn.de/buchung/fahrplan/suche#sts=true&so=M%C3%BCnchen%20Hbf&zo=Bad%20T%C3%B6lz&hd=2026-09-30T09:02:00&hza=D&ar=false&s=true&d=false&hz=%5B%5D" target="_blank" rel="noopener">DB live ↗</a></div>
+            <div class="train-option"><label><input type="radio" name="outbound" value="0926"><span><b>09:26 → 10:28</b><small>RB 56 · direkt · Innsbruck etwa 16:45</small></span></label><a href="https://www.bahn.de/buchung/fahrplan/suche#sts=true&so=M%C3%BCnchen%20Hbf&zo=Bad%20T%C3%B6lz&hd=2026-09-30T09:26:00&hza=D&ar=false&s=true&d=false&hz=%5B%5D" target="_blank" rel="noopener">DB live ↗</a></div>
+            <div class="train-option"><label><input type="radio" name="outbound" value="1002"><span><b>10:02 → 10:57</b><small>RB 56 · direkt · Innsbruck etwa 17:15</small></span></label><a href="https://www.bahn.de/buchung/fahrplan/suche#sts=true&so=M%C3%BCnchen%20Hbf&zo=Bad%20T%C3%B6lz&hd=2026-09-30T10:02:00&hza=D&ar=false&s=true&d=false&hz=%5B%5D" target="_blank" rel="noopener">DB live ↗</a></div>
+            <div class="train-option latest"><label><input type="radio" name="outbound" value="1029"><span><b>10:29 → 11:28</b><small>Späteste Option · RB 56 direkt · Innsbruck etwa 17:45</small></span></label><a href="https://www.bahn.de/buchung/fahrplan/suche#sts=true&so=M%C3%BCnchen%20Hbf&zo=Bad%20T%C3%B6lz&hd=2026-09-30T10:29:00&hza=D&ar=false&s=true&d=false&hz=%5B%5D" target="_blank" rel="noopener">DB live ↗</a></div>
+          </div>
+          <p class="checkin-ok">✓ Alle Optionen ab 08:00 Uhr ermöglichen die Ankunft vor dem Check-in-Ende um 21:00 Uhr.</p>
+          <p class="note">Ankunft Innsbruck mit etwa einer Stunde Pausenzeit kalkuliert. Fahrplanstand 21.09.2026. Fahrradkarte, Kapazität und mögliche Änderungen vor Abfahrt verbindlich prüfen.</p>
+        </article>
+        <div class="return-stack">
+          <article class="panel booked">
+            <div class="panel-top"><span class="tag done">Gebucht</span><span>Mi · 07.10.2026</span></div>
+            <h3>Mestre → München</h3>
+            <div class="time-row"><strong>11:47 → 18:38</strong><span>2 Personen</span></div>
+            <p>Direktverbindung · 6:51 Stunden · Tickets und Fahrradreservierungen mitführen.</p>
+            <a class="live-link" href="https://www.bahn.de/buchung/fahrplan/suche#sts=true&so=Venezia%20Mestre&zo=M%C3%BCnchen%20Hbf&hd=2026-10-07T11:47:00&hza=D&ar=false&s=true&d=false&hz=%5B%5D" target="_blank" rel="noopener">Verbindung und aktuelle Meldungen bei DB ↗</a>
+          </article>
+          <article class="panel booked">
+            <div class="panel-top"><span class="tag done">Gebucht</span><span>Mi · 07.10.2026</span></div>
+            <h3>Mestre → München</h3>
+            <div class="time-row"><strong>15:47 → 22:53</strong><span>3 Personen</span></div>
+            <p>Direktverbindung · 7:06 Stunden · Tickets und Fahrradreservierungen mitführen.</p>
+            <a class="live-link" href="https://www.bahn.de/buchung/fahrplan/suche#sts=true&so=Venezia%20Mestre&zo=M%C3%BCnchen%20Hbf&hd=2026-10-07T15:47:00&hza=D&ar=false&s=true&d=false&hz=%5B%5D" target="_blank" rel="noopener">Verbindung und aktuelle Meldungen bei DB ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stays" id="unterkuenfte">
+      <div class="section-heading"><p class="eyebrow">Schlafen, frühstücken, weiterfahren</p><h2>Unterkünfte</h2><p>Belluno ist entsprechend der Reiseplanung für den 04.10. eingetragen.</p></div>
+      <div class="stay-list" id="stayList"></div>
+    </section>
+
+    <section class="section checklist-section" id="packliste">
+      <div class="section-heading"><p class="eyebrow">Was mit muss</p><h2>Packliste</h2><p>Nach Vorbild Lisa die Fahrradmaus. Der Stand wird auf diesem Gerät automatisch gespeichert.</p></div>
+      <div class="progress-wrap"><div><strong id="packProgress">0 / 0</strong><span>eingepackt</span></div><div class="progress"><i id="packProgressBar"></i></div><button class="reset-button" id="resetPack">Zurücksetzen</button></div>
+      <div class="check-grid" id="packGrid"></div>
+    </section>
+
+    <section class="section tasks-section" id="aufgaben">
+      <div class="section-heading"><p class="eyebrow">Vor der Abfahrt</p><h2>Aufgaben</h2><p>Eigene Aufgaben können ergänzt und lokal gespeichert werden.</p></div>
+      <form class="task-form" id="taskForm"><input id="taskInput" maxlength="100" placeholder="Neue Aufgabe …" aria-label="Neue Aufgabe"><button class="button primary" type="submit">Hinzufügen</button></form>
+      <div class="task-list" id="taskList"></div>
+    </section>
+
+    <section class="section cost-section">
+      <div class="cost-card">
+        <div><p class="eyebrow">Gemeinsame Ausgaben</p><h2>Wer schuldet wem?</h2><p>Unterkünfte, Essen und Zugkosten direkt in Tricount eintragen und fair aufteilen.</p></div>
+        <a class="button dark" href="https://tricount.com/toBupMOqjvGoIPvlit" target="_blank" rel="noopener">Tricount öffnen ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>MU → DOLOS → MESTRE · 30.09.–07.10.2026</span><span>Daten: <a href="https://www.komoot.com/de-de/collection/4714872/-mu-badtoelz-dolos-mestre-venedig?share_token=aT7o9THLhqHhdYPdLx1cVd1tM1IJHghPVbrp3KPV6sJkvXHXan" target="_blank" rel="noopener">Komoot</a> · <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
