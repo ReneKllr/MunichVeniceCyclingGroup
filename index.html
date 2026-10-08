@@ -20,7 +20,7 @@
     <button class="menu-button" aria-label="Menü öffnen" aria-expanded="false">Menü</button>
     <nav class="nav" aria-label="Hauptnavigation">
       <a href="#route">Route</a><a href="#etappen">Etappen</a><a href="#zuege">Züge</a>
-      <a href="#unterkuenfte">Unterkünfte</a><a href="#packliste">Packliste</a><a href="#aufgaben">Aufgaben</a><a class="nav-cta" href="https://tricount.com/toBupMOqjvGoIPvlit" target="_blank" rel="noopener">Tricount ↗</a>
+      <a href="#unterkuenfte">Unterkünfte</a><a href="#fotos">Fotos</a><a href="#packliste">Packliste</a><a href="#aufgaben">Aufgaben</a><a class="nav-cta" href="https://tricount.com/toBupMOqjvGoIPvlit" target="_blank" rel="noopener">Tricount ↗</a>
     </nav>
   </header>
 
@@ -113,6 +113,47 @@
       <div class="stay-list" id="stayList"></div>
     </section>
 
+    <section class="section photo-section" id="fotos">
+      <div class="section-heading"><p class="eyebrow">Unsere Reise in Bildern</p><h2>Foto-Highlights</h2><p>Lieblingsmomente direkt vom Smartphone hochladen und mit der Gruppe teilen.</p></div>
+      <div class="photo-shell">
+        <div class="photo-config" id="photoConfig" hidden>
+          <span class="photo-icon" aria-hidden="true">◎</span>
+          <div><h3>Fotogalerie vorbereiten</h3><p>Die Oberfläche ist integriert. Zum Aktivieren fehlt noch die Nhost-Projektkennung.</p></div>
+        </div>
+
+        <div class="photo-auth" id="photoAuth" hidden>
+          <div class="photo-auth-copy"><span class="tag open">Nur Teilnehmende</span><h3>Zur Reisegalerie anmelden</h3><p>Einmal anmelden, danach bleibt der Zugang auf diesem Gerät gespeichert.</p></div>
+          <form class="photo-login-form" id="photoLoginForm">
+            <label id="photoNameField" hidden>Dein Name<input id="photoName" type="text" autocomplete="name" maxlength="32"></label>
+            <label>E-Mail<input id="photoEmail" type="email" autocomplete="email" required></label>
+            <label>Passwort<input id="photoPassword" type="password" autocomplete="current-password" minlength="8" required></label>
+            <div class="photo-auth-actions"><button class="button dark" type="submit">Anmelden</button><button class="text-button" id="photoSignupButton" type="button">Ersten Zugang erstellen</button></div>
+            <p class="photo-status" id="photoAuthStatus" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="photo-app" id="photoApp" hidden>
+          <div class="photo-toolbar">
+            <div><span class="tag done">Gemeinsame Galerie</span><h3 id="photoGreeting">Eure Highlights</h3></div>
+            <button class="text-button" id="photoLogoutButton" type="button">Abmelden</button>
+          </div>
+          <form class="photo-upload" id="photoUploadForm">
+            <label class="photo-picker" for="photoFiles"><span>＋</span><strong>Fotos auswählen</strong><small>JPG, PNG, WebP oder HEIC · mehrere möglich</small></label>
+            <input id="photoFiles" type="file" accept="image/*" multiple required>
+            <div class="photo-fields">
+              <label>Reisetag<select id="photoStage" required><option value="">Etappe wählen</option><option value="1">Tag 1 · Bad Tölz → Innsbruck</option><option value="2">Tag 2 · Innsbruck → Sterzing</option><option value="3">Tag 3 · Sterzing → St. Lorenzen</option><option value="4">Tag 4 · St. Lorenzen → Niederdorf</option><option value="5">Tag 5 · Niederdorf → Belluno</option><option value="6">Tag 6 · Belluno → Limana</option><option value="7">Tag 7 · Limana → Treviso</option><option value="8">Tag 8 · Treviso → Mestre</option></select></label>
+              <label>Bildunterschrift<input id="photoCaption" maxlength="100" placeholder="Was war besonders?"></label>
+              <button class="button primary" id="photoUploadButton" type="submit">Hochladen</button>
+            </div>
+            <p class="photo-privacy">Vor dem Upload werden große Bilder verkleinert; Standort- und Kameradaten werden dabei entfernt.</p>
+            <p class="photo-status" id="photoUploadStatus" aria-live="polite"></p>
+          </form>
+          <div class="photo-gallery-head"><h3>Alle Highlights</h3><button class="text-button" id="photoRefreshButton" type="button">Aktualisieren</button></div>
+          <div class="photo-gallery" id="photoGallery"><p class="photo-empty">Galerie wird geladen …</p></div>
+        </div>
+      </div>
+    </section>
+
     <section class="section checklist-section" id="packliste">
       <div class="section-heading"><p class="eyebrow">Was mit muss</p><h2>Packliste</h2><p>Nach Vorbild Lisa die Fahrradmaus. Der Stand wird auf diesem Gerät automatisch gespeichert.</p></div>
       <div class="progress-wrap"><div><strong id="packProgress">0 / 0</strong><span>eingepackt</span></div><div class="progress"><i id="packProgressBar"></i></div><button class="reset-button" id="resetPack">Zurücksetzen</button></div>
@@ -135,5 +176,6 @@
 
   <footer><span>MU → DOLOS → MESTRE · 30.09.–07.10.2026</span><span>Daten: <a href="https://www.komoot.com/de-de/collection/4714872/-mu-badtoelz-dolos-mestre-venedig?share_token=aT7o9THLhqHhdYPdLx1cVd1tM1IJHghPVbrp3KPV6sJkvXHXan" target="_blank" rel="noopener">Komoot</a> · <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></span></footer>
   <script src="app.js"></script>
+  <script type="module" src="gallery.js"></script>
 </body>
 </html>
